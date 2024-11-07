@@ -33,7 +33,7 @@ namespace CompteBanqueNS
             {
                 throw new ArgumentOutOfRangeException("Montant doit etre positif");
             }
-            m_solde += montant;
+            m_solde -= montant; // code intentionnellement faux 
         }
         public void Créditer(double montant)
         {
@@ -45,7 +45,7 @@ namespace CompteBanqueNS
             {
                 throw new ArgumentOutOfRangeException("Montant crédité doit être supérieur à 0");
             }
-            m_solde += montant;
+            m_solde -= montant; // code intentionnellement faux 
 
         }
         public void BloquerCompte()
